@@ -316,10 +316,10 @@ dispatchDrop(document);
             return false;
         }
 
-        gchar* buffer     = nullptr;
-        gsize  bufferSize = 0U;
-        GError* error     = nullptr;
-        auto const saved  = gdk_pixbuf_save_to_buffer(image, &buffer, &bufferSize, "png", &error, nullptr);
+        gchar*     buffer     = nullptr;
+        gsize      bufferSize = 0U;
+        GError*    error      = nullptr;
+        auto const saved      = gdk_pixbuf_save_to_buffer(image, &buffer, &bufferSize, "png", &error, nullptr);
         g_object_unref(image);
 
         if (!saved)
